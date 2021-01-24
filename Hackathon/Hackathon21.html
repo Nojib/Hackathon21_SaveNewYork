@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>SaveNewYork</title>
+</head>
+
+<body>
+    <h2 style="background-color:rgb(250, 214, 11);">
+        <button onclick=>
+            <h1>Login</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>COVID-Test Info</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>NY-State Restriction</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>CDC Rules</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>WHO Rules</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>Qurantine Plan</h1>
+        </button>
+        <button onclick="Click here">
+            <h1>Safety Issue</h1>
+        </button>
+    </h2>
+    <script Type="Page is loaded"></script>
+
+    <h1>Get Your Vaccine</h1>
+    <div id="Who can get Vaccine Now">
+        <h2>Who can get Vaccine Now</h2>
+        <h3 style="background-color:rgb(199, 216, 152);">
+            <p>Currently, the vaccine is available to people 65 and older and essential workers including teachers and
+                education workers, first responders, public safety workers, public transit workers, grocery store
+                workers, healthcare providers and staff with direct patient contact, emergency responders, staff at
+                COVID-19 testing and vaccination locations, home health aides, and long-term care staff and residents
+                among others.
+
+                Click here for the full list of groups currently eligible for the COVID-19 vaccine</p>
+            </h2>
+            <a href="https://data.cdc.gov/Vaccinations/COVID-19-Vaccine-Distribution-Allocations-by-Juris/saz5-9hgg"
+                target="_blank">CDC database for vaccination updates and statistics.</a>
+            <h2>What to do to keep yourself and others safe from COVID-19</h2>
+            <ul>
+                <li>Maintain at least a 1-metre distance between yourself and others to reduce your risk of infection
+                    when
+                    they cough, sneeze or speak. Maintain an even greater distance between yourself and others when
+                    indoors.
+                    The further away, the better</li>
+                <li>Make wearing a mask a normal part of being around other people. The appropriate use, storage and
+                    cleaning or disposal are essential to make masks as effective as possible</li>
+
+            </ul>
+
+            <h3>What new yorker need to know About Covid-19 vaccines</h3>
+            <p>Two COVID-19 vaccines (Pfizer-BioNTech and Moderna) have been approved for emergency
+                use by the Food and Drug Administration (FDA). In clinical studies, both vaccines were more
+                than 94% effective at protecting participants from COVID-19</p>
+    </div>
+    <div id="Why should I get vaccinated?">
+        <h2>Are vaccination safe?</h2>
+        <ul>
+            <li> Yes. You cannot get COVID-19 from the vaccine.
+                The vaccine does not contain the virus. It teaches your body’s
+                immune system how to fight the virus, so it can fight the virus
+                if you are exposed to it.</li>
+            <li>The COVID-19 vaccines have gone through large clinical
+                studies involving tens of thousands of people of various ages,
+                races and ethnicities. The evidence from those studies was
+                closely reviewed by the FDA and independent organizations.</li>
+
+            <li>Researchers have been working on vaccines for coronaviruses
+                for years, so they did not start from scratch.</li>
+        </ul>
+
+        <p>By getting vaccinated, you are helping protect yourself, your family and your friends. You are also helping
+            make your community safer. In clinical studies, both Pfizer and Moderna vaccines were more than 94%
+            effective at protecting participants from COVID-19. They were also shown to be safe and that you cannot get
+            COVID-19 from them.</p>
+
+
+    </div>
+    <div id="media">
+        <picture>
+            <source media="(min-width:465px)" srcset="vaccine.jpg">
+
+            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DEILCpte7GSw&psig=AOvVaw2ckYjIOHMVqW2f7q4nKhao&ust=1611601067057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjMyPyfte4CFQAAAAAdAAAAABAa"
+                alt="Vaccine_cdc">
+        </picture>
+        <h2>How to Wear A mask & Use Hand Sanitizer Properly</h2>
+        <<iframe width="560" height="315" src="https://www.youtube.com/embed/ciUniZGD4tY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2LKx1u1Nph4" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+    </div>
+    <hr>
+    <form>
+        <h2 style="background-color:rgb(153, 205, 248);">
+
+            <p>How old are you?: <input type="text" value=></p>
+            <p>What is your zipcode: <input type="text" value=></p>
+
+            <p>What is your Gender:
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </p>
+            <p>Please select your category to get the vaccine:
+                <select>
+                    <option selected>essential worker</option>
+                    <option>65+years old</option>
+                    <option>Health worker</option>
+
+                    <select>
+
+            </p>
+
+            <a
+                href="https://www1.nyc.gov/site/doh/covid/covid-19-vaccines.page?utm_source=Google_Search&utm_medium=English&utm_campaign=Coronavirus">Click
+                Here to find more about Vaccine-info</a>
+
+        </h2>
+    </form>
+    <hr>
+    <script>
+
+        function signUp() {
+            if (document.getElementById("password2").value == document.getElementById("cfmpassword2").value) {
+                var users = new Object();
+                users.firstName = document.getElementById("firstName").value;
+                users.lastName = document.getElementById("lastName").value;
+                users.username2 = document.getElementById("username2").value;
+                users.email = document.getElementById("email").value;
+                users.password2 = document.getElementById("password2").value;
+
+
+                var postUser = new XMLHttpRequest(); // new HttpRequest instance to send user details
+
+                postUser.open("POST", "/users", true); //Use the HTTP POST method to send data to server
+
+                postUser.setRequestHeader("Content-Type", "application/json");
+
+                // Convert the data in "users" object to JSON format before sending to the server.
+                postUser.send(JSON.stringify(users));
+            }
+            else {
+                alert("Password column and Confirm Password column doesn't match!")
+            }
+        }
+
+    </script>
+
+
+    </head>
+
+    <body>
+
+        <div style="margin-top: -703px; margin-left: 1250px; position: absolute;">
+            <!-- Sign up button -->
+            <p>Need an account? &nbsp;
+                <button class="signup" id='signup' onclick="document.getElementById('id02').style.display='block'"
+                    style="width:auto; height: 6.1vh;">
+                    Sign Up
+                </button>
+            </p>
+        </div>
+
+        <!-- The Sign Up Modal-->
+        <div id="id02" class="modal2">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close2"
+                title="Close Modal">&times;</span>
+
+            <!-- Modal Content -->
+            <form class="modal-content2">
+                <div class="container3">
+                    <h1>Sign Up</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="firstName"><b>First Name</b></label>
+                    <input type="text" id="firstName" placeholder="Enter First Name" name="firstName" required>
+
+                    <label for="lastName"><b>Last Name</b></label>
+                    <input type="text" id="lastName" placeholder="Enter Last Name" name="lastName" required>
+
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" id="username2" placeholder="Enter Username" name="username" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" id="email" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" id="password2" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-confirm"><b>Confirm Password</b></label>
+                    <input type="password" id="cfmpassword2" placeholder="Confirm Password" name="psw-confirm" required>
+
+                    <br>
+                    <br>
+                    <p>By creating an account you agree to our <a href="aboutus.html" style="color:dodgerblue">Terms &
+                            Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                            class="cancelbtn2">Cancel</button>
+                        <button type="submit" class="signupbtn" onclick="signUp()">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+
+    </body>
+
+</html>
